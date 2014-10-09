@@ -1,4 +1,6 @@
 docker-kafka
 ============
 
-Apache Kafka cluster
+Run Apache Kafka cluster in docker.
+
+Modified from https://github.com/wurstmeister/kafka-docker

@@ -1,5 +1,5 @@
 #
-# Run a Apache Kafka cluster 
+# Run Apache Kafka cluster in docker 
 #
 # Version     0.1
 #
@@ -10,17 +10,14 @@ MAINTAINER Huahai Yang <hyang@juji.io>
 
 RUN \
   echo "===> download kafka..."  && \ 
-  wget -O /tmp/kafka.tgz \
-    http://www.gtlib.gatech.edu/pub/apache/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz && \   
-    \
-    \
-  echo "===> install kafka..."  && \ 
-  tar xfz /tmp/kafka.tgz -C /opt && \
+  wget -q -O - \
+  http://www.gtlib.gatech.edu/pub/apache/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz | \
+  tar -xzf - -C /opt && \   
   \
   \
   echo "===> setup kafka..."  
 
-ENV KAFKA_HOME /opt/kafka
+ENV KAFKA_HOME /opt/kafka_2.9.2-0.8.1.1
 
 ADD start-kafka.sh /usr/bin/start-kafka.sh
 ADD broker-list.sh /usr/bin/broker-list.sh
