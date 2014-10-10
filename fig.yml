@@ -2,6 +2,7 @@ zookeeper:
   image: huahaiy/zookeeper
   ports: 
     - "2181:2181"
+
 kafka:
   image: huahaiy/kafka
   ports:
