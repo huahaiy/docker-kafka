@@ -15,6 +15,10 @@ RUN \
   tar -xzf - -C /opt && \   
   \
   \
+  echo "===> install docker..."  && \
+  wget -O - https://get.docker.com/ | sh && \
+  \
+  \
   echo "===> setup kafka..."  
 
 ENV KAFKA_HOME /opt/kafka_2.9.2-0.8.1.1
