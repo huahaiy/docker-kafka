@@ -23,6 +23,8 @@ RUN \
 
 ENV KAFKA_HOME /opt/kafka_2.9.2-0.8.1.1
 
+VOLUME ["/kafka"]
+
 ADD start-kafka.sh /usr/bin/start-kafka.sh
 ADD broker-list.sh /usr/bin/broker-list.sh
 
