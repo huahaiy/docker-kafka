@@ -6,7 +6,7 @@
 
 FROM huahaiy/oracle-java
 
-MAINTAINER Huahai Yang <hyang@juji.io>
+MAINTAINER Huahai Yang <hyang@juji-inc.com>
 
 RUN \
   echo "===> download kafka..."  && \ 
