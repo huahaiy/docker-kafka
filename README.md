@@ -9,7 +9,7 @@ Environment variables starting with `KAFKA_` will be converted into proper Kafka
 
 The following environment variables are good to know.
 
-* `KAFKA_ADVERTISED_HOST_NAME` This is required 
+* `KAFKA_ADVERTISED_HOST_NAME` This is required to be the IP address of the host. If using boot2docker on OSX, it's the docker host address 192.168.59.103.
 
 * `KAFKA_ADVERTISED_PORT` If running the cluster on a single host (e.g. for dev/test purposes), you can leave this unspecified, so that the docker containers' internal mapped ports can be used.
 
