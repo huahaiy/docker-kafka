@@ -1,7 +1,7 @@
 docker-kafka
 ============
 
-Run a multi-node Apache Kafka cluster in a set of docker containers.
+Run Apache Kafka cluster in docker containers and support multi-node cluster.
 
 `/kafka` is exposed as the data directory, to be linked to a host directory.
 
@@ -9,7 +9,7 @@ Environment variables starting with `KAFKA_` will be converted into proper Kafka
 
 The following environment variables are good to know.
 
-* `KAFKA_ADVERTISED_HOST_NAME` This is required to be the IP address of the host. If using boot2docker on OSX, it's the docker host address 192.168.59.103.
+* `KAFKA_ADVERTISED_HOST_NAME` This is required 
 
 * `KAFKA_ADVERTISED_PORT` If running the cluster on a single host (e.g. for dev/test purposes), you can leave this unspecified, so that the docker containers' internal mapped ports can be used.
 
@@ -17,7 +17,7 @@ The following environment variables are good to know.
 
 * `KAFKA_LOG_DIRS` If unspecified, default will be `/kafka/kafka-logs-$KAFKA_BROKER_ID`
 
-* `KAFKA_ZOOKEEPER_CONNECT` If unspecified, default will be comman separated IP addresses in environment varibles matching `ZK.*PORT_2181_TCP`, which you will have if some zookeeper containers are linked to this container (e.g. using fig).
+* `KAFKA_ZOOKEEPER_CONNECT` If unspecified, default will be comma separated IP addresses in environment varibles matching `ZK.*PORT_2181_TCP`, which you will have if some zookeeper containers are properly linked to this container (e.g. using fig and name the linked zookeeper `zk`).
 
 * `KAFKA_HEAP_OPTS` 
 

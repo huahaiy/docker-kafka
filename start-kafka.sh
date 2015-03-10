@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
+
+mkdir -p "/kafka"
+
 if [[ -z "$KAFKA_ADVERTISED_PORT" ]]; then
   export KAFKA_ADVERTISED_PORT=$(docker port `hostname` 9092 | sed -r "s/.*:(.*)/\1/g")
 fi
