@@ -1,7 +1,7 @@
 #
 # Run Apache Kafka cluster in docker 
 #
-# Version     0.1
+# Version     0.2
 #
 
 FROM huahaiy/oracle-java
