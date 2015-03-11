@@ -1,7 +1,7 @@
 #
 # Run Apache Kafka cluster in docker 
 #
-# Version     0.3
+# Version     0.4
 #
 
 FROM huahaiy/oracle-java
@@ -16,6 +16,10 @@ RUN \
   \
   \
   echo "===> install docker..."  && \
+  echo "deb http://http.debian.net/debian wheezy-backports main" | tee \
+    /etc/apt/sources.list.d/wheezy-backports.list && \
+  apt-get update && \
+  apt-get install -t wheezy-backports linux-image-amd64 && \
   wget -O - https://get.docker.com/ | sh && \
   \
   \
