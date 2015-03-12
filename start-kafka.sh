@@ -17,7 +17,7 @@ if [[ -z "$KAFKA_LOG_DIRS" ]]; then
 fi
 
 if [[ -z "$KAFKA_ZOOKEEPER_CONNECT" ]]; then
-  export KAFKA_ZOOKEEPER_CONNECT=$(env | grep ZK.*PORT_2181_TCP= | sed -e 's|.*tcp://||' | paste -sd ,)
+  export KAFKA_ZOOKEEPER_CONNECT=zookeeper
 fi
 
 if [[ -n "$KAFKA_HEAP_OPTS" ]]; then

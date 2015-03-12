@@ -17,7 +17,7 @@ The following environment variables are good to know.
 
 * `KAFKA_LOG_DIRS` If unspecified, default will be `/kafka/kafka-logs-$KAFKA_BROKER_ID`
 
-* `KAFKA_ZOOKEEPER_CONNECT` If unspecified, default will be comma separated IP addresses in environment varibles matching `ZK.*PORT_2181_TCP`, which you will have if some zookeeper containers are properly linked to this container (e.g. using fig and name the linked zookeeper `zk`).
+* `KAFKA_ZOOKEEPER_CONNECT` Comma-delimited zookeeper addresses. If unspecified, default will be `zookeeper`, i.e. the name for the linked zookeeper container (e.g. using docker-compose and named the linked zookeeper `zookeeper`).
 
 * `KAFKA_HEAP_OPTS` 
 
