@@ -19,7 +19,7 @@ RUN \
   echo "deb http://http.debian.net/debian jessie-backports main" | tee \
     /etc/apt/sources.list.d/jessie-backports.list && \
   apt-get update && \
-  apt-get install docker.io && \
+  apt-get install -y --force-yes docker.io && \
   \
   \
   echo "===> setup kafka..."  
