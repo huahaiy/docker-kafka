@@ -1,7 +1,7 @@
 #
 # Run Apache Kafka cluster in docker 
 #
-# Version     0.5
+# Version     0.6
 #
 
 FROM huahaiy/oracle-java
@@ -24,7 +24,7 @@ RUN \
   \
   echo "===> setup kafka..."  
 
-ENV KAFKA_HOME /opt/kafka_2.10-0.8.2.0
+ENV KAFKA_HOME /opt/kafka_2.10-0.8.2.2
 
 VOLUME ["/kafka"]
 
