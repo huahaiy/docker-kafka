@@ -11,9 +11,9 @@ The following environment variables are good to know.
 
 * `KAFKA_ADVERTISED_HOST_NAME` This is required to be the IP address of the host. If using boot2docker on OSX, it's the docker host address 192.168.59.103.
 
-* `KAFKA_ADVERTISED_PORT` If running the cluster on a single host (e.g. for dev/test purposes), you can leave this unspecified, so that the docker containers' internal mapped ports can be used.
+* `KAFKA_ADVERTISED_PORT` Default to be 9092
 
-* `KAFKA_BROKER_ID` If unspecified, the advertised port number will be used. 
+* `KAFKA_BROKER_ID` If unspecified, 0. 
 
 * `KAFKA_LOG_DIRS` If unspecified, default will be `/kafka/kafka-logs-$KAFKA_BROKER_ID`
 
