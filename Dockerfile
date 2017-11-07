@@ -11,7 +11,7 @@ MAINTAINER Huahai Yang <hyang@juji-inc.com>
 RUN \
   echo "===> download kafka..."  && \ 
   wget -q -O - \
-  http://www.carfab.com/apachesoftware/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz | \
+  http://apache.cs.utah.edu/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz | \
   tar -xzf - -C /opt && \   
   \
   \
