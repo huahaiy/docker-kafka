@@ -33,6 +33,7 @@ do
     if egrep -q "(^|^#)$kafka_name=" $KAFKA_HOME/config/server.properties; then
       sed -r -i "s@(^|^#)($kafka_name)=(.*)@\2=${!env_var}@g" $KAFKA_HOME/config/server.properties 
     else
+      printf "\n" >> $KAFKA_HOME/config/server.properties
       echo "$kafka_name=${!env_var}" >> $KAFKA_HOME/config/server.properties
     fi
   fi

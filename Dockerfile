@@ -1,23 +1,31 @@
 #
 # Run Apache Kafka cluster in docker 
 #
-# Version     0.9
+# Version     1.0
 #
 
 FROM huahaiy/oracle-java
 
 MAINTAINER Huahai Yang <hyang@juji-inc.com>
 
+ARG kafka_version=1.0.0
+ARG scala_version=2.12
+
+ENV KAFKA_VERSION=$kafka_version \
+    SCALA_VERSION=$scala_version \
+    KAFKA_HOME=/opt/kafka \ 
+    PATH=${PATH}:${KAFKA_HOME}/bin
+
 RUN \
   echo "===> download kafka..."  && \ 
+  mkdir -p /opt/kafka && \
   wget -q -O - \
-  http://apache.cs.utah.edu/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz | \
-  tar -xzf - -C /opt && \   
+  http://apache.mirrors.hoobly.com/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz | \
+  tar -xzf - -C /opt/kafka --strip-components=1 && \   
   \
   \
   echo "===> setup kafka..."  
 
-ENV KAFKA_HOME /opt/kafka_2.11-0.9.0.1
 
 VOLUME ["/kafka"]
 
