@@ -1,14 +1,14 @@
 #
 # Run Apache Kafka cluster in docker 
 #
-# Version     1.0
+# Version     1.1
 #
 
-FROM huahaiy/oracle-java
+FROM huahaiy/java
 
 MAINTAINER Huahai Yang <hyang@juji-inc.com>
 
-ARG kafka_version=1.0.0
+ARG kafka_version=2.5.0
 ARG scala_version=2.12
 
 ENV KAFKA_VERSION=$kafka_version \
